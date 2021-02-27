@@ -29,8 +29,10 @@ class MyWindow(pg.GraphicsWindow):
         self.initUI()
 
     def initUI(self):
-        text = """Мониторинг полета кансат. <br>
-                        Команда: Чолбон"""
+        if self.serial.dummyMode():
+            text = """Мониторинг полета. Тестовый режим"""
+        else:
+            text = """Мониторинг полета. """
         self.Layout.addLabel(text,fontSize=25)
         self.Layout.nextRow()
 
