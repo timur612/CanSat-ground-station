@@ -66,7 +66,7 @@ class MyWindow(pg.GraphicsWindow):
         # Temperature graph
         l2 = self.Layout.addLayout(colspan=20,rowspan=2)
         l21 = l2.addLayout(rowspan=1, border=(83, 83, 83))
-        graf_temp = l21.addPlot(title="Temperature (ºc)")
+        graf_temp = l21.addPlot(title="Temperature (ºC)")
         self.temp_plot = graf_temp.plot(pen=(29, 185, 84))
         self.temp_data = np.linspace(0, 0, 30)
         self.ptr2 = 0
